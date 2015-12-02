@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Pseudo-random</title>
+    </head>
+    <script type="text/javascript">
+    
+    var ranGen = function(div){ 
+        // number must be divisible by div.
+        n = Math.floor((Math.random() * 99999999) + 10000);
+        n = Math.round(n / div) * div;
+        console.log(n);
+        return insertNum(n); 
+        
+    };
+    
+    var insertNum = function(){
+        var post = document.getElementById("output");
+        post.innerHTML = post.innerHTML + "Random value is " + n;
+        
+    };
+        
+    ranGen(1423);
+    
+    </script>
+
+<body>
+    <p id="output"></p>
+    
+    
+    </body>
+    <script type="text/javascript">
+    ranGen(11111);
+    </script>
+
+
+</html>
